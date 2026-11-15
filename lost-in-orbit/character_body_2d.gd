@@ -56,6 +56,7 @@ func check_for_lasers() -> void:
 
 func trigger_game_over(message: String) -> void:
 	print(message)
+	Global.score = 0
 	get_tree().call_deferred("reload_current_scene")
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
