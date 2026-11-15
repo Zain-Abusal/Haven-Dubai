@@ -601,6 +601,7 @@ texture = ExtResource("4_27bay")
 [node name="Area2D" type="Area2D" parent="Bg2" unique_id=894208750]
 position = Vector2(-1479, 129)
 script = ExtResource("6_ggavl")
+metadata/_edit_group_ = true
 
 [node name="Shard" type="Sprite2D" parent="Bg2/Area2D" unique_id=141857365]
 metadata/_edit_group_ = true
@@ -609,9 +610,63 @@ metadata/_edit_group_ = true
 position = Vector2(159, 68)
 scale = Vector2(1.5312499, 1.53125)
 sprite_frames = SubResource("SpriteFrames_8vrlf")
-frame_progress = 0.48569396
+frame_progress = 0.0087436205
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Area2D" unique_id=1984444844]
+position = Vector2(159, 67)
+shape = SubResource("CircleShape2D_1vivr")
+
+[node name="Area2D2" type="Area2D" parent="Bg2" unique_id=1424068177]
+position = Vector2(-1745, -180)
+script = ExtResource("6_ggavl")
+metadata/_edit_group_ = true
+
+[node name="Shard" type="Sprite2D" parent="Bg2/Area2D2" unique_id=345456178]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bg2/Area2D2/Shard" unique_id=1887779477]
+position = Vector2(159, 68)
+scale = Vector2(1.5312499, 1.53125)
+sprite_frames = SubResource("SpriteFrames_8vrlf")
+frame_progress = 0.9049079
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Area2D2" unique_id=1314511911]
+position = Vector2(159, 67)
+shape = SubResource("CircleShape2D_1vivr")
+
+[node name="Area2D3" type="Area2D" parent="Bg2" unique_id=1433948861]
+position = Vector2(-987, 33)
+script = ExtResource("6_ggavl")
+metadata/_edit_group_ = true
+
+[node name="Shard" type="Sprite2D" parent="Bg2/Area2D3" unique_id=979356549]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bg2/Area2D3/Shard" unique_id=1230116199]
+position = Vector2(159, 68)
+scale = Vector2(1.5312499, 1.53125)
+sprite_frames = SubResource("SpriteFrames_8vrlf")
+frame_progress = 0.9049079
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Area2D3" unique_id=1432158726]
+position = Vector2(159, 67)
+shape = SubResource("CircleShape2D_1vivr")
+
+[node name="Area2D4" type="Area2D" parent="Bg2" unique_id=341177265]
+position = Vector2(-506, 84)
+script = ExtResource("6_ggavl")
+metadata/_edit_group_ = true
+
+[node name="Shard" type="Sprite2D" parent="Bg2/Area2D4" unique_id=358890961]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bg2/Area2D4/Shard" unique_id=154804621]
+position = Vector2(159, 68)
+scale = Vector2(1.5312499, 1.53125)
+sprite_frames = SubResource("SpriteFrames_8vrlf")
+frame_progress = 0.9049079
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Area2D4" unique_id=963804035]
 position = Vector2(159, 67)
 shape = SubResource("CircleShape2D_1vivr")
 
