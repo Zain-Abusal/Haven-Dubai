@@ -25,6 +25,11 @@ NewAutoloadScript="*uid://7cefgxuw0d35"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+laser=""
+player=""
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
