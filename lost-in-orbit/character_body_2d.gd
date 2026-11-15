@@ -19,6 +19,9 @@ func _physics_process(delta: float) -> void:
 	# 2. Handle jump ONLY when grounded AND jump hasn't been used yet
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and can_jump:
 		velocity.y = JUMP_VELOCITY
+		animated_sprite.frame = 0
+		animated_sprite.play("Jump")
+		print("played Jump")
 		can_jump = false # Locks jumping until the player lands again
 
 	# 3. Get input direction and move horizontally
@@ -43,11 +46,10 @@ func update_animations(direction: float) -> void:
 
 	# Play Jump when airborne, otherwise play Walking or Idle
 	if not is_on_floor():
-		animated_sprite.play("Jump")
+		animated_sprite.play("Idle")
 	elif direction != 0:
 		animated_sprite.play("Walking")
-	else:
-		animated_sprite.play("Idle")
+
 
 # Handle player leaving viewport
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:

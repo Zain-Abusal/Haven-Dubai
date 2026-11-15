@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://ciki3w70y6men" path="res://Sprite/Explorer/idle_shoot(64,64).png" id="5_1pe0h"]
 [ext_resource type="Texture2D" uid="uid://bf1fxsrhm1175" path="res://Sprite/Shards/Pixel purple gem.png" id="5_27bay"]
 [ext_resource type="Texture2D" uid="uid://cm87gyuc7ta0b" path="res://Sprite/Explorer/idle_walk(64,64).png" id="6_27bay"]
+[ext_resource type="Script" uid="uid://bf58vpti55a7f" path="res://area_2d.gd" id="6_ggavl"]
+[ext_resource type="Script" uid="uid://r24pc86s7cnh" path="res://label.gd" id="14_ubhxj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
 size = Vector2(80.00004, 70.67311)
@@ -460,7 +462,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cgue7")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"Jump",
 "speed": 9.0
 }, {
@@ -604,9 +606,10 @@ metadata/_edit_group_ = true
 position = Vector2(159, 68)
 scale = Vector2(1.5312499, 1.53125)
 sprite_frames = SubResource("SpriteFrames_8vrlf")
-frame_progress = 0.18451127
+frame_progress = 0.8160628
 
 [node name="Area2D" type="Area2D" parent="Bg2/Shard" unique_id=894208750]
+script = ExtResource("6_ggavl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Shard/Area2D" unique_id=1984444844]
 position = Vector2(159, 67)
@@ -661,7 +664,7 @@ metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=636989578]
 sprite_frames = SubResource("SpriteFrames_1vivr")
-animation = &"Idle"
+animation = &"Jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1715626846]
 position = Vector2(0.43536377, 1.7415009)
@@ -671,5 +674,14 @@ shape = SubResource("CapsuleShape2D_1vivr")
 position = Vector2(-8.272102, -13.061228)
 scale = Vector2(0.43537417, 0.43537417)
 rect = Rect2(-10, -10, 58, 89)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1365056927]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1156396711]
+offset_left = 1026.0
+offset_top = 14.0
+offset_right = 1129.0
+offset_bottom = 52.0
+script = ExtResource("14_ubhxj")
 
 [connection signal="screen_exited" from="Player/VisibleOnScreenNotifier2D" to="Player" method="_on_visible_on_screen_notifier_2d_screen_exited"]
