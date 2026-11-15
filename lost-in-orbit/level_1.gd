@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var scroll_speed: float = 120.0
+@export var scroll_speed: float = 140.0
 
 @onready var bg_1 = $Bg
 @onready var bg_2 = $Bg2
