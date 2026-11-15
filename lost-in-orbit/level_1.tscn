@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cm87gyuc7ta0b" path="res://Sprite/Explorer/idle_walk(64,64).png" id="6_27bay"]
 [ext_resource type="Script" uid="uid://bf58vpti55a7f" path="res://area_2d.gd" id="6_ggavl"]
 [ext_resource type="Script" uid="uid://r24pc86s7cnh" path="res://label.gd" id="14_ubhxj"]
+[ext_resource type="Script" uid="uid://dj71rop8dx3t7" path="res://win_label.gd" id="15_ubhxj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
 size = Vector2(80.00004, 70.67311)
@@ -548,6 +549,8 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1vivr"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_1vivr"]
+
 [node name="Level1" type="Node2D" unique_id=1405165123]
 script = ExtResource("1_1pe0h")
 
@@ -610,7 +613,7 @@ metadata/_edit_group_ = true
 position = Vector2(159, 68)
 scale = Vector2(1.5312499, 1.53125)
 sprite_frames = SubResource("SpriteFrames_8vrlf")
-frame_progress = 0.9196382
+frame_progress = 0.6800301
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Area2D" unique_id=1984444844]
 position = Vector2(159, 67)
@@ -738,5 +741,17 @@ offset_top = 14.0
 offset_right = 1129.0
 offset_bottom = 52.0
 script = ExtResource("14_ubhxj")
+
+[node name="WinLabel" type="Label" parent="CanvasLayer" unique_id=14173920]
+offset_left = 426.0
+offset_top = 206.0
+offset_right = 703.0
+offset_bottom = 264.0
+text = "You Win!!"
+label_settings = SubResource("LabelSettings_1vivr")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+script = ExtResource("15_ubhxj")
 
 [connection signal="screen_exited" from="Player/VisibleOnScreenNotifier2D" to="Player" method="_on_visible_on_screen_notifier_2d_screen_exited"]
