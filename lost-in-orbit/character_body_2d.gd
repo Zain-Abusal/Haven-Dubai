@@ -19,7 +19,6 @@ func _physics_process(delta: float) -> void:
 	# 2. Handle jump ONLY when grounded AND jump hasn't been used yet
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and can_jump:
 		velocity.y = JUMP_VELOCITY
-		animated_sprite.frame = 0
 		animated_sprite.play("Jump")
 		print("played Jump")
 		can_jump = false # Locks jumping until the player lands again

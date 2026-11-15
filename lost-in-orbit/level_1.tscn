@@ -462,7 +462,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cgue7")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"Jump",
 "speed": 9.0
 }, {
@@ -598,20 +598,20 @@ shape = SubResource("RectangleShape2D_1pe0h")
 position = Vector2(1729, 327)
 texture = ExtResource("4_27bay")
 
-[node name="Shard" type="Sprite2D" parent="Bg2" unique_id=141857365]
+[node name="Area2D" type="Area2D" parent="Bg2" unique_id=894208750]
 position = Vector2(-1479, 129)
+script = ExtResource("6_ggavl")
+
+[node name="Shard" type="Sprite2D" parent="Bg2/Area2D" unique_id=141857365]
 metadata/_edit_group_ = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bg2/Shard" unique_id=672204356]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bg2/Area2D/Shard" unique_id=672204356]
 position = Vector2(159, 68)
 scale = Vector2(1.5312499, 1.53125)
 sprite_frames = SubResource("SpriteFrames_8vrlf")
-frame_progress = 0.8160628
+frame_progress = 0.48569396
 
-[node name="Area2D" type="Area2D" parent="Bg2/Shard" unique_id=894208750]
-script = ExtResource("6_ggavl")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Shard/Area2D" unique_id=1984444844]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Area2D" unique_id=1984444844]
 position = Vector2(159, 67)
 shape = SubResource("CircleShape2D_1vivr")
 
