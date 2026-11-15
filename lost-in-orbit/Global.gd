@@ -13,7 +13,7 @@ func add_point(amount: int = 1) -> void:
 	score += amount
 	score_changed.emit(score)
 
-	if score >= 20:
+	if score >= 1:
 		has_won = true
 		game_won.emit()
 
