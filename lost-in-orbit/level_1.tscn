@@ -12,8 +12,20 @@
 [ext_resource type="Texture2D" uid="uid://ciki3w70y6men" path="res://Sprite/Explorer/idle_shoot(64,64).png" id="5_1pe0h"]
 [ext_resource type="Texture2D" uid="uid://cm87gyuc7ta0b" path="res://Sprite/Explorer/idle_walk(64,64).png" id="6_27bay"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8vrlf"]
-radius = 43.997116
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
+size = Vector2(80.00004, 70.67311)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sof0w"]
+size = Vector2(92.19516, 87.01923)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pe0h"]
+size = Vector2(73.65852, 77.40386)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ggavl"]
+size = Vector2(83.902466, 79.80768)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubhxj"]
+size = Vector2(77.560974, 77.40385)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0sxyj"]
 radius = 71.44928
@@ -489,7 +501,9 @@ metadata/_edit_group_ = true
 [node name="Area2D" type="StaticBody2D" parent="Bg/Debris" unique_id=1327772638]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg/Debris/Area2D" unique_id=647668467]
-shape = SubResource("CircleShape2D_8vrlf")
+position = Vector2(-1.4634094, -3.125)
+scale = Vector2(0.9999992, 0.9999992)
+shape = SubResource("RectangleShape2D_27bay")
 
 [node name="Debris2" type="Sprite2D" parent="Bg" unique_id=588555689]
 position = Vector2(392.99994, 145.00002)
@@ -500,7 +514,9 @@ metadata/_edit_group_ = true
 [node name="Area2D" type="StaticBody2D" parent="Bg/Debris2" unique_id=651433446]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg/Debris2/Area2D" unique_id=718270038]
-shape = SubResource("CircleShape2D_8vrlf")
+position = Vector2(2.1951904, 7.4519043)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_sof0w")
 
 [node name="Debris3" type="Sprite2D" parent="Bg" unique_id=1477799159]
 position = Vector2(-431.00003, 17)
@@ -511,7 +527,9 @@ metadata/_edit_group_ = true
 [node name="Area2D" type="StaticBody2D" parent="Bg/Debris3" unique_id=2037604134]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg/Debris3/Area2D" unique_id=412108833]
-shape = SubResource("CircleShape2D_8vrlf")
+position = Vector2(-3.1707077, -1.6826935)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_1pe0h")
 
 [node name="Bg2" type="Sprite2D" parent="." unique_id=1993302888]
 position = Vector2(1729, 327)
@@ -526,7 +544,9 @@ metadata/_edit_group_ = true
 [node name="Area2D" type="StaticBody2D" parent="Bg2/Debris" unique_id=1439934762]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Debris/Area2D" unique_id=479454896]
-shape = SubResource("CircleShape2D_8vrlf")
+position = Vector2(3.4146118, 3.846161)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_ggavl")
 
 [node name="Debris2" type="Sprite2D" parent="Bg2" unique_id=1941449358]
 position = Vector2(65.99994, 124.999985)
@@ -537,7 +557,9 @@ metadata/_edit_group_ = true
 [node name="Area2D" type="StaticBody2D" parent="Bg2/Debris2" unique_id=1970636958]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Debris2/Area2D" unique_id=509978469]
-shape = SubResource("CircleShape2D_8vrlf")
+position = Vector2(4.6341553, 5.0480347)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_ubhxj")
 
 [node name="Debris3" type="StaticBody2D" parent="Bg2" unique_id=1145003264]
 metadata/_edit_group_ = true
