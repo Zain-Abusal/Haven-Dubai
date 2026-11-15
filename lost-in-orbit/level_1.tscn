@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cgoff8hhq22i4" path="res://Sprite/BG/row-1-column-2.png" id="4_27bay"]
 [ext_resource type="Texture2D" uid="uid://dee1yygbw5j7g" path="res://Sprite/Explorer/idle_jump(64,64).png" id="4_gyffv"]
 [ext_resource type="Texture2D" uid="uid://ciki3w70y6men" path="res://Sprite/Explorer/idle_shoot(64,64).png" id="5_1pe0h"]
+[ext_resource type="Texture2D" uid="uid://bf1fxsrhm1175" path="res://Sprite/Shards/Pixel purple gem.png" id="5_27bay"]
 [ext_resource type="Texture2D" uid="uid://cm87gyuc7ta0b" path="res://Sprite/Explorer/idle_walk(64,64).png" id="6_27bay"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
@@ -20,6 +21,66 @@ size = Vector2(92.19516, 87.01923)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1pe0h"]
 size = Vector2(73.65852, 77.40386)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sof0w"]
+atlas = ExtResource("5_27bay")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rrlx8"]
+atlas = ExtResource("5_27bay")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cnrsw"]
+atlas = ExtResource("5_27bay")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0m1tj"]
+atlas = ExtResource("5_27bay")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihgif"]
+atlas = ExtResource("5_27bay")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7475k"]
+atlas = ExtResource("5_27bay")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofxyu"]
+atlas = ExtResource("5_27bay")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8vrlf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sof0w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rrlx8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cnrsw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0m1tj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihgif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7475k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofxyu")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1vivr"]
+radius = 21.095022
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ggavl"]
 size = Vector2(83.902466, 79.80768)
@@ -534,6 +595,21 @@ shape = SubResource("RectangleShape2D_1pe0h")
 [node name="Bg2" type="Sprite2D" parent="." unique_id=1993302888]
 position = Vector2(1729, 327)
 texture = ExtResource("4_27bay")
+
+[node name="Shard" type="Sprite2D" parent="Bg2" unique_id=141857365]
+position = Vector2(-1729, -327)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bg2/Shard" unique_id=672204356]
+position = Vector2(159, 68)
+scale = Vector2(1.5312499, 1.53125)
+sprite_frames = SubResource("SpriteFrames_8vrlf")
+frame_progress = 0.7364365
+
+[node name="Area2D" type="Area2D" parent="Bg2/Shard" unique_id=894208750]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Shard/Area2D" unique_id=1984444844]
+position = Vector2(159, 67)
+shape = SubResource("CircleShape2D_1vivr")
 
 [node name="Debris" type="Sprite2D" parent="Bg2" unique_id=1464255673]
 position = Vector2(-347.00003, 288.99997)
