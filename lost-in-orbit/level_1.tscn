@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cm87gyuc7ta0b" path="res://Sprite/Explorer/idle_walk(64,64).png" id="6_27bay"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8vrlf"]
-radius = 49.45792
+radius = 43.997116
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0sxyj"]
 radius = 71.44928
