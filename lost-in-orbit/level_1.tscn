@@ -597,13 +597,14 @@ position = Vector2(1729, 327)
 texture = ExtResource("4_27bay")
 
 [node name="Shard" type="Sprite2D" parent="Bg2" unique_id=141857365]
-position = Vector2(-1729, -327)
+position = Vector2(-1479, 129)
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bg2/Shard" unique_id=672204356]
 position = Vector2(159, 68)
 scale = Vector2(1.5312499, 1.53125)
 sprite_frames = SubResource("SpriteFrames_8vrlf")
-frame_progress = 0.7364365
+frame_progress = 0.18451127
 
 [node name="Area2D" type="Area2D" parent="Bg2/Shard" unique_id=894208750]
 
