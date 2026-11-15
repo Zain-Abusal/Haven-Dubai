@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -300.0
+const JUMP_VELOCITY = -400.0
 const Gravity = 200.0
 
 func _physics_process(delta: float) -> void:
@@ -23,3 +23,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+# Handle player leaving viewport
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	print("Player left the screen! Game Over.")
+	get_tree().call_deferred("reload_current_scene")

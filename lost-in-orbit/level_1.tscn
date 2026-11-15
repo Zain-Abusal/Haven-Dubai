@@ -486,7 +486,7 @@ scale = Vector2(2.0500002, 2.08)
 texture = ExtResource("2_5rr72")
 metadata/_edit_group_ = true
 
-[node name="Area2D" type="Area2D" parent="Bg/Debris" unique_id=687494157]
+[node name="Area2D" type="StaticBody2D" parent="Bg/Debris" unique_id=1327772638]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg/Debris/Area2D" unique_id=647668467]
 shape = SubResource("CircleShape2D_8vrlf")
@@ -497,7 +497,7 @@ scale = Vector2(2.0500002, 2.08)
 texture = ExtResource("2_5rr72")
 metadata/_edit_group_ = true
 
-[node name="Area2D" type="Area2D" parent="Bg/Debris2" unique_id=664067822]
+[node name="Area2D" type="StaticBody2D" parent="Bg/Debris2" unique_id=651433446]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg/Debris2/Area2D" unique_id=718270038]
 shape = SubResource("CircleShape2D_8vrlf")
@@ -508,7 +508,7 @@ scale = Vector2(2.0500002, 2.08)
 texture = ExtResource("2_5rr72")
 metadata/_edit_group_ = true
 
-[node name="Area2D" type="Area2D" parent="Bg/Debris3" unique_id=579470846]
+[node name="Area2D" type="StaticBody2D" parent="Bg/Debris3" unique_id=2037604134]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg/Debris3/Area2D" unique_id=412108833]
 shape = SubResource("CircleShape2D_8vrlf")
@@ -523,7 +523,7 @@ scale = Vector2(2.0500002, 2.08)
 texture = ExtResource("2_5rr72")
 metadata/_edit_group_ = true
 
-[node name="Area2D" type="Area2D" parent="Bg2/Debris" unique_id=1014277908]
+[node name="Area2D" type="StaticBody2D" parent="Bg2/Debris" unique_id=1439934762]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Debris/Area2D" unique_id=479454896]
 shape = SubResource("CircleShape2D_8vrlf")
@@ -534,19 +534,19 @@ scale = Vector2(2.0500002, 2.08)
 texture = ExtResource("2_5rr72")
 metadata/_edit_group_ = true
 
-[node name="Area2D" type="Area2D" parent="Bg2/Debris2" unique_id=548621379]
+[node name="Area2D" type="StaticBody2D" parent="Bg2/Debris2" unique_id=1970636958]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Debris2/Area2D" unique_id=509978469]
 shape = SubResource("CircleShape2D_8vrlf")
 
-[node name="Debris3" type="Area2D" parent="Bg2" unique_id=1215950378]
+[node name="Debris3" type="StaticBody2D" parent="Bg2" unique_id=1145003264]
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Debris3" unique_id=810119132]
 position = Vector2(-180, -175)
 shape = SubResource("CircleShape2D_0sxyj")
 
-[node name="Debris4" type="Area2D" parent="Bg2" unique_id=1106816904]
+[node name="Debris4" type="StaticBody2D" parent="Bg2" unique_id=147063401]
 position = Vector2(651, 260)
 metadata/_edit_group_ = true
 
@@ -555,7 +555,7 @@ position = Vector2(-180, -175)
 shape = SubResource("CircleShape2D_0sxyj")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1533715046]
-position = Vector2(151.00003, 89)
+position = Vector2(300, 87.00001)
 scale = Vector2(2.296875, 2.296875)
 script = ExtResource("3_gyffv")
 metadata/_edit_group_ = true
@@ -567,3 +567,10 @@ animation = &"Idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1715626846]
 position = Vector2(0.43536377, 1.7415009)
 shape = SubResource("CapsuleShape2D_1vivr")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Player" unique_id=1362968117]
+position = Vector2(-8.272102, -13.061228)
+scale = Vector2(0.43537417, 0.43537417)
+rect = Rect2(-10, -10, 58, 89)
+
+[connection signal="screen_exited" from="Player/VisibleOnScreenNotifier2D" to="Player" method="_on_visible_on_screen_notifier_2d_screen_exited"]
