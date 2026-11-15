@@ -610,7 +610,7 @@ metadata/_edit_group_ = true
 position = Vector2(159, 68)
 scale = Vector2(1.5312499, 1.53125)
 sprite_frames = SubResource("SpriteFrames_8vrlf")
-frame_progress = 0.0087436205
+frame_progress = 0.9196382
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bg2/Area2D" unique_id=1984444844]
 position = Vector2(159, 67)
